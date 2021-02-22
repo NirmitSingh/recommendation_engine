@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 
 def give_rec(title, sig):
-    final_df=pd.read_csv('/home/harshmeetsingh/Bytedance/gamerec.csv')
+    final_df=pd.read_csv('gamerec.csv')
     indices = pd.Series(final_df.index, index=final_df['name']).drop_duplicates()
     idx = indices[title]
     sig_scores = list(enumerate(sig[idx]))

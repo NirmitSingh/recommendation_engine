@@ -1,0 +1,79 @@
+<!-- processing page -->
+<!-- -->
+<!-- -->
+
+<html>
+<head>
+
+<title>Game Zone </title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+ <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Indie+Flower|Yellowtail|Maven+Pro|Creepster|Dancing+Script|Finger+Paint">
+
+<style>
+body, html {
+  height: 100%;
+  margin-top: 0;
+  font-family:Maven Pro !important;
+}
+.bg {
+  background-image: url({{ url_for ('static', filename = 'bgg.jpg') }});
+  /* Full height */
+  height:100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+input[type=file]{
+border=none;
+border-radius:5px;
+}
+
+<!-- for input start -->
+td {
+	align:center;
+	}
+
+
+
+.lbl {
+	font-size:35px;
+	color:#141414;
+	align:left
+	width:150px;
+	required
+}
+<!-- for input end -->
+</style>
+</head>
+<body style="font-family:Maven Pro !important;">
+
+
+<div class="bg" style="padding-top:280px ";>
+<div style="background-color:white; margin-left:440px; padding-left:70px; padding-top:50px; border-radius:13px; height:250px; width:450px;";>
+    <tr><td style="font-family:Maven Pro;"><b class="lbl"; >   Game Recommender </b> </td></tr>
+<form action="{{ url_for('show') }} " method="post" enctype="multipart/form-data">	
+	<input style="margin-left:1px; margin-top:60px; width:280px;" type="text" name="name" placeholder="Enter Game Name" required>
+	
+	
+<input type="submit" class="btn btn-info btn-lg" value="SHOW GAMES " style="background-color:rgb(40, 40, 46);
+	margin-top:30px; margin-left:20px;   padding-left:30px; color:white; padding-top:5px; width:230px; height:50px; font-size:25px; border-radius:5px; ">
+	<br><br>
+</form>	
+
+  
+</div>
+
+</div>
+
+
+</div>
+
+</body>
+</html>
